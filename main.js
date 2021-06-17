@@ -18,13 +18,15 @@ let capitalise = (str) => {
 
 //API KEY (to be deleted) - 26e4c500c1f11ad29591ea65e2d7e11d
 
-async function getWeather() {
+async function getWeather(city) {
   const locationDiv = document.getElementById("location");
   const weatherDescDiv = document.getElementById("weatherdesc");
 
   try {
     const response = await fetch(
-      "https://api.openweathermap.org/data/2.5/weather?q=London&appid=26e4c500c1f11ad29591ea65e2d7e11d",
+      "https://api.openweathermap.org/data/2.5/weather?q=" +
+        city +
+        "&appid=26e4c500c1f11ad29591ea65e2d7e11d",
       { mode: "cors" }
     );
     const weatherData = await response.json();
@@ -36,4 +38,14 @@ async function getWeather() {
   }
 }
 
-getWeather();
+//Search bar location input
+const form = document.getElementById("form");
+
+function onSubmit(event) {
+  let searchValue = document.forms["form"].location.value;
+  form.reset();
+  event.preventDefault();
+  getWeather(searchValue);
+}
+
+form.addEventListener("submit", onSubmit);

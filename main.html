@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>weather.app ☀️</title>
   </head>
@@ -14,8 +17,15 @@
         <div class="links"></div>
         <div class="toggle"></div>
         <div class="search">
-          <input type="text" id="lname" placeholder="London" />
-          <button type="submit"/>Go</button>
+          <form id="form">
+            <input
+              type="text"
+              name="location"
+              id="search"
+              placeholder="London"
+            />
+            <input type="submit" id="btn" value="Go" />
+          </form>
         </div>
       </div>
       <div class="content">
@@ -31,8 +41,7 @@
               <div class="tempPic"></div>
             </div>
           </div>
-          <div class="innerbox2">
-          </div>
+          <div class="innerbox2"></div>
         </div>
         <div class="box2">
           <div class="row"></div>
