@@ -1,0 +1,154 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(rgba(33, 148, 110, 0.568), rgb(69, 101, 161));
+}
+
+/*** Top bar contents: links, searchbar **/
+.nav {
+  background-color: rgb(69, 101, 161);
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search {
+  margin-right: 1vw;
+  border-radius: 30px;
+  width: 30vw;
+  height: 65%;
+  display: flex;
+}
+
+input {
+  height: 100%;
+  border-radius: 20px 0px 0px 20px;
+  padding: 0 2vw;
+  margin-right: -1vw;
+  background-color: rgba(253, 255, 253, 0.774);
+  width: 70%;
+  outline: none;
+  justify-content: center;
+}
+
+button {
+  width: 20%;
+  margin-left: 0;
+  color: white;
+  height: 100%;
+  background-color: rgb(115, 184, 157);
+  border-radius: 0px 20px 20px 0px;
+  justify-content: center;
+  padding: 0 1vw;
+}
+button:hover {
+  background-color: rgb(154, 207, 187);
+  cursor: pointer;
+}
+
+/******************** Main content ********************/
+.content {
+  margin-top: 1vh;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.box1 {
+  flex-grow: 1;
+  order: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.box2 {
+  flex-grow: 1.8;
+  order: 2;
+  display: flex;
+  height: 80vh;
+  background-color: blue;
+  margin: 1vw;
+}
+
+/** Location and temperature box **/
+.innerbox1 {
+  height: 60vh;
+  width: 100%;
+  margin: 1vh 1vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.lbox {
+  height: 50%;
+  width: 90%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.tempbox {
+  height: 40%;
+  width: 90%;
+  background-color: yellow;
+  align-self: center;
+}
+
+.time,
+.weatherdesc {
+  width: 100%;
+  height: 25%;
+  display: flex;
+}
+
+.time p,
+.weatherdesc p {
+  padding: 0.3vw 1vw;
+  font-size: 3vh;
+}
+
+.time p {
+  align-self: flex-end;
+}
+
+.location {
+  width: 100%;
+  height: 50%;
+  margin-top: -2vh;
+}
+
+.location p {
+  padding: 0vw 1vw;
+  font-size: 7vh;
+}
+
+.innerbox2 {
+  height: 40vh;
+  width: 100%;
+  background-color: springgreen;
+  margin: 0 1vw;
+}
+
+@media (min-width: 0px) and (max-width: 750px) {
+  .content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
